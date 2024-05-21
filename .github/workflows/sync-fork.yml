@@ -1,0 +1,19 @@
+name: Sync Fork
+
+on:
+  schedule:
+    - cron: '0 * * * *' # At minute 0.
+  workflow_dispatch: # on button click
+
+jobs:
+  sync:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: tgymnich/fork-sync@v1.8
+        with:
+          token: ${{ secrets.SYNC_FORK_ACCESS_TOKEN }}
+          owner: cbaud
+          base: master
+          head: master
