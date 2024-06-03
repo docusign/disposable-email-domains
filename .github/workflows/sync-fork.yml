@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: tgymnich/fork-sync@v1.9
+      - uses: tgymnich/fork-sync@v2.0
         with:
           token: ${{ secrets.SYNC_FORK_ACCESS_TOKEN }}
           owner: cbaud
